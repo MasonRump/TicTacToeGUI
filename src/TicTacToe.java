@@ -16,7 +16,7 @@ public class TicTacToe
 
     private static final int ROW = 3;
     private static final int COL = 3;
-    private static String[][] board = new String[ROW][COL];
+    public static String[][] board = new String[ROW][COL];
     
     
     /**
@@ -90,7 +90,7 @@ public class TicTacToe
         
     }
     
-    private static void clearBoard()
+    public static void clearBoard()
     {
        // sets all the board elements to a space
        for(int row=0; row < ROW; row++)
@@ -124,7 +124,7 @@ public class TicTacToe
        return retVal;
            
     }
-    private static boolean isWin(String player)
+    public static boolean isWin(String player)
     {
         if(isColWin(player) || isRowWin(player) || isDiagnalWin(player))
         {
@@ -182,7 +182,7 @@ public class TicTacToe
     
     // checks for a tie before board is filled.
     // check for the win first to be efficient
-    private static boolean isTie()
+    public static boolean isTie()
     {
         boolean xFlag = false;
         boolean oFlag = false;
